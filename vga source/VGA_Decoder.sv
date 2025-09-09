@@ -23,7 +23,7 @@ module VGA_Decoder (
     vga_decoder u_vga_decoder (.*);
 endmodule
 
-module Pixel_clk_gen (
+module Pixel_clk_gen ( //25MHz
     input  logic clk,
     input  logic reset,
     output logic pclk
