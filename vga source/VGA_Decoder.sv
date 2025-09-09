@@ -3,6 +3,7 @@
 module VGA_Decoder (
     input  logic       clk,
     input  logic       reset,
+    output logic       pclk,
     output logic       h_sync,
     output logic       v_sync,
     output logic [9:0] x_pixel,
@@ -12,7 +13,7 @@ module VGA_Decoder (
 );
 
     // wire list
-    logic pclk;
+    // logic pclk;
     logic [9:0] h_counter, v_counter;
 
     Pixel_clk_gen u_Pixel_clk_gen (.*);
