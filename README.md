@@ -8,25 +8,27 @@
 -----------------------------
 ---------------------------------
  - Sync의 위치를 조절함에 따라 Display의 위치를 조정할 수 있다.
-<br/><img src="vga2.jpg" width ="900"><br/>
+<br/><img src="vga2.jpg" width ="900"><br/><br/>
 
  - 해상도: 640 x 480, 주사율: 60Hz 기준 Signal Timing
 <img src="vga3.jpg" width ="850"><br/>
  - Synch : 1Line 또는 1Frame이 끝났음을 알리는 신호 -> retrace 시작
  - Blanking Interval : retrace 시간동안 display하지 않는 시간
 
-
 ----------------------------------------------------------------
+### 기본 VGA 블럭 다이어그램
+- 25MHz 클럭마다 픽셀을 카메라로 받는 rgb로 표현하게 됩니다.
+<br/><img src = "basic_vga.jpg" width = '850'><br/><br/>
 
-<img scr = "basic_vga.jpg" width = '800"><br/>
-
-(컬러바 실습)
+- Mux를 통해 display하는 화면을 전환합니다.
+color bar 대신에 Filter를 넣게 된다면 Filter 처리된 화면이 출력하게 됩니다.
+<br/><img src = "colorbar_mux.jpg" width = '850'><br/><br/>
+컬러바 실습
 
 (필터링 실습)
-
+- ROM에 사진의 BMP형식의 데이터를 저장하고 display할때 ROM의 사진 데이터를 가져옵니다.
+<br/><img src = "rom_img_show.png" width = '850'><br/><br/>
 (저장된 사진ROM 출력 실습)
-
-(gray scaling)
 
 ---------------------------------------
 # BMP
@@ -42,3 +44,9 @@
 |12|4|비트맵의 너비(픽셀 단위)|
 |16|4|비트맵의 높이(픽셀 단위)|
 |1C|2|픽셀당 비트 수|
+
+-------------------------------------
+## 실제 실시간 영상 Display
+### Block Diagram
+<img src = "camera.jpg" width = '1000'><br/>
+#### 1Frame씩 Buffer를 통과하여 화면에 Display 되는 구조
