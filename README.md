@@ -24,6 +24,7 @@
 color bar 대신에 Filter를 넣게 된다면 Filter 처리된 화면이 출력하게 됩니다.
 <br/><img src = "colorbar_mux.jpg" width = '850'><br/><br/>
 컬러바 실습
+![Image](https://github.com/user-attachments/assets/efa48fc2-aebb-4617-9a05-ec3437273e63)
 
 (필터링 실습)
 - ROM에 사진의 BMP형식의 데이터를 저장하고 display할때 ROM의 사진 데이터를 가져옵니다.
@@ -31,10 +32,10 @@ color bar 대신에 Filter를 넣게 된다면 Filter 처리된 화면이 출력
 (저장된 사진ROM 출력 실습)
 
 ---------------------------------------
-# BMP
+## BMP
 - 비트맵 디지털 그림을 저장하는 데 쓰이는 그림 파일 포맷
 
-## BMP의 헤더 구조(핵심 데이터만 표기)
+### BMP의 헤더 구조(핵심 데이터만 표기)
 | 오프셋(16진수) | 크기(바이트) | 설명 |
 |--------|---------|----------|
 |   BMP 헤더    |
