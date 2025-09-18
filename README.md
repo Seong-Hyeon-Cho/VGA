@@ -19,21 +19,27 @@
 ### 기본 VGA 블럭 다이어그램
 - 25MHz 클럭마다 픽셀을 카메라로 받는 rgb로 표현하게 됩니다.
 ![Image](https://github.com/user-attachments/assets/065ec26a-41a1-4b78-8200-f96c1127bb2c)
-
+사용된 보드 : digilent Basys3, STM32 NUCLEO-F401RE 카메라 : OV7670
 - Mux를 통해 display하는 화면을 전환합니다.
 color bar 대신에 Filter를 넣게 된다면 Filter 처리된 화면이 출력하게 됩니다.
 ![Image](https://github.com/user-attachments/assets/3cbe97fd-ec57-484b-8c9f-9c76c6b04c23)
-컬러바 실습
+> 컬러바 실습 사진
 ![Image](https://github.com/user-attachments/assets/efa48fc2-aebb-4617-9a05-ec3437273e63)
 
-(필터링 실습)
+
 - ROM에 사진의 BMP형식의 데이터를 저장하고 display할때 ROM의 사진 데이터를 가져옵니다.
 <img width="966" height="581" alt="Image" src="https://github.com/user-attachments/assets/31909715-12e7-46d7-9adb-15e2eb9ca9b3" />
-(저장된 사진ROM 출력 실습)
-
+> 실습 사진
+![Image](https://github.com/user-attachments/assets/75400926-943c-4933-ba48-5b76ccdb0905)
+    - gray filter를 추가적으로 거친 이미지 출력
 ---------------------------------------
-## BMP
+## 번외 : BMP
 - 비트맵 디지털 그림을 저장하는 데 쓰이는 그림 파일 포맷
+- 특징
+    - 비압축, 비손실 형식: BMP 파일은 데이터를 압축하지 않아 이미지 품질이 높고 왜곡이 없으며, 편집이 용이 
+    - 고품질 이미지: 정교한 컬러 사진과 같은 복잡한 이미지를 고품질로 저장하는 데 이상적 
+    - 큰 파일 크기: 비압축 방식, JPEG나 GIF와 같은 다른 이미지 파일 형식에 비해 파일 크기가 매우 큼 
+    - 넓은 호환성: Windows 운영체제에서 널리 사용되었으며, 다양한 이미지 편집 프로그램(Adobe Photoshop, Windows Photos 등)에서 지원 가능
 
 ### BMP의 헤더 구조(핵심 데이터만 표기)
 | 오프셋(16진수) | 크기(바이트) | 설명 |
@@ -50,4 +56,7 @@ color bar 대신에 Filter를 넣게 된다면 Filter 처리된 화면이 출력
 ## 실제 실시간 영상 Display
 ### Block Diagram
 ![Image](https://github.com/user-attachments/assets/a83b397d-6f4f-49b2-8a7d-107815cb872e)
-#### 1Frame씩 Buffer를 통과하여 화면에 Display 되는 구조
+- 1Frame씩 Buffer를 통과하여 화면에 Display 되는 구조
+
+> 실습 사진
+![Image](https://github.com/user-attachments/assets/877c3397-60b8-4752-a36e-3669dbbf7ac4)
