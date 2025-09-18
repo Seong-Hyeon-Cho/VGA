@@ -31,7 +31,7 @@ color bar 대신에 Filter를 넣게 된다면 Filter 처리된 화면이 출력
 <img width="966" height="581" alt="Image" src="https://github.com/user-attachments/assets/31909715-12e7-46d7-9adb-15e2eb9ca9b3" />
 > 실습 사진
     - gray filter를 추가적으로 거친 이미지 출력
-![Image](https://github.com/user-attachments/assets/75400926-943c-4933-ba48-5b76ccdb0905)
+![Image](https://github.com/user-attachments/assets/005e8e92-8e78-446f-9c98-5a75af9d3844)
 ---------------------------------------
 ## 번외 : BMP
 - 비트맵 디지털 그림을 저장하는 데 쓰이는 그림 파일 포맷
