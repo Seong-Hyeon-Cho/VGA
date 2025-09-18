@@ -4,31 +4,31 @@
  - CRT의 주사 개념을 이용한 그래픽 표현 방식
  - 실제 표시되는 해상도 영역보다 더 큰 구역에 Porch 구간(Display 하지 않는 구간)을 두어 한 line 끝에서 왼쪽으로, 한 frame 끝에서 다시 맨 위로 되돌아오는 동안 화면이 안나오게 함    --> 화면을 안정화시키고 기준을 잡기 용이         
 
-<img src="vga1.jpg" width ="1000"><br/>
+![Image](https://github.com/user-attachments/assets/7eadfa60-688f-4671-95fd-d9a456c667ef)
 -----------------------------
 ---------------------------------
  - Sync의 위치를 조절함에 따라 Display의 위치를 조정할 수 있다.
-<br/><img src="vga2.jpg" width ="900"><br/><br/>
+![Image](https://github.com/user-attachments/assets/dd2baf99-c15b-429b-a120-e09dc0f994be)
 
  - 해상도: 640 x 480, 주사율: 60Hz 기준 Signal Timing
-<img src="vga3.jpg" width ="850"><br/>
+![Image](https://github.com/user-attachments/assets/985b3aea-9168-4652-885f-d9a8cebb1b61)
  - Synch : 1Line 또는 1Frame이 끝났음을 알리는 신호 -> retrace 시작
  - Blanking Interval : retrace 시간동안 display하지 않는 시간
 
 ----------------------------------------------------------------
 ### 기본 VGA 블럭 다이어그램
 - 25MHz 클럭마다 픽셀을 카메라로 받는 rgb로 표현하게 됩니다.
-<br/><img src = "basic_vga.jpg" width = '850'><br/><br/>
+![Image](https://github.com/user-attachments/assets/065ec26a-41a1-4b78-8200-f96c1127bb2c)
 
 - Mux를 통해 display하는 화면을 전환합니다.
 color bar 대신에 Filter를 넣게 된다면 Filter 처리된 화면이 출력하게 됩니다.
-<br/><img src = "colorbar_mux.jpg" width = '850'><br/><br/>
+![Image](https://github.com/user-attachments/assets/3cbe97fd-ec57-484b-8c9f-9c76c6b04c23)
 컬러바 실습
 ![Image](https://github.com/user-attachments/assets/efa48fc2-aebb-4617-9a05-ec3437273e63)
 
 (필터링 실습)
 - ROM에 사진의 BMP형식의 데이터를 저장하고 display할때 ROM의 사진 데이터를 가져옵니다.
-<br/><img src = "rom_img_show.png" width = '850'><br/><br/>
+<img width="966" height="581" alt="Image" src="https://github.com/user-attachments/assets/31909715-12e7-46d7-9adb-15e2eb9ca9b3" />
 (저장된 사진ROM 출력 실습)
 
 ---------------------------------------
@@ -49,5 +49,5 @@ color bar 대신에 Filter를 넣게 된다면 Filter 처리된 화면이 출력
 -------------------------------------
 ## 실제 실시간 영상 Display
 ### Block Diagram
-<img src = "camera.jpg" width = '1000'><br/>
+![Image](https://github.com/user-attachments/assets/a83b397d-6f4f-49b2-8a7d-107815cb872e)
 #### 1Frame씩 Buffer를 통과하여 화면에 Display 되는 구조
