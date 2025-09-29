@@ -19,7 +19,7 @@
 ### 기본 VGA 블럭 다이어그램
 - 25MHz 클럭마다 픽셀을 카메라로 받는 rgb로 표현하게 됩니다.
 ![Image](https://github.com/user-attachments/assets/065ec26a-41a1-4b78-8200-f96c1127bb2c)
-사용된 보드 : digilent Basys3, STM32 NUCLEO-F401RE 카메라 : OV7670
+사용된 보드 : digilent Basys3, STM32 NUCLEO-F401RE 카메라 : OV7670   <br>
 - Mux를 통해 display하는 화면을 전환합니다.
 color bar 대신에 Filter를 넣게 된다면 Filter 처리된 화면이 출력하게 됩니다.
 ![Image](https://github.com/user-attachments/assets/3cbe97fd-ec57-484b-8c9f-9c76c6b04c23)
